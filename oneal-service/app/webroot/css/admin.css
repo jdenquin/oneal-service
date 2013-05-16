@@ -7,8 +7,8 @@
 
 /** General Style Info **/
 body {
-	background: #003d4c;
-	color: #fff;
+	background: #fff;
+	color: #003d4c;
 	font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
 	font-size:90%;
 	margin: 0;
@@ -65,8 +65,8 @@ p {
 }
 
 #header a {
-	color: #fff;
-	background: #003d4c;
+	color: #003d4c;
+	background: #fff;
 	text-decoration: underline;
 }
 

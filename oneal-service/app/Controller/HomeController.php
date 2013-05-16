@@ -5,6 +5,17 @@ class HomeController extends AppController {
 
 	public $name = 'Home';
 	public $uses = array();
+	
+	public function preindex() {
+		//define the language layout
+		$this->layout = 'languages';
+		
+		if($this->session['User.language'] != null) {
+			$this->redirect(array('language' => $this->session['User.language'], 'controller' => 'Home', 'action' => 'index'));
+		} else {
+			$this->set('languages', Configure::read('Config.languages'));
+		}
+	}
 
 	public function index() {
 		$this->loadModel('Category');
