@@ -22,7 +22,7 @@ $siteDescription = __('Welcome on Our Website');
 <body>
 	<div id="container">
 		<div id="header">
-			<caption><?php echo $this->Html->link(__('Home', true), array('language' => $language, 'controller' => 'Home', 'action' => 'index')); ?></caption>
+			<caption><?php echo $this->Html->link(__('Home', true), array('language' => $language, 'controller' => 'categories', 'action' => 'index')); ?></caption>
 			<caption><?php echo $this->Html->link(__('Abous Us', true), array('language' => $language, 'controller' => 'About', 'action' => 'index')); ?></caption>
 			<caption><?php echo $this->Html->link(__('Broken/Missing Piece', true), array('language' => $language, 'controller' => 'Categories', 'action' => 'index')); ?></caption>
 			<caption><?php echo $this->Html->link(__('F.A.Q', true), array('language' => $language, 'controller' => 'Faq', 'action' => 'index')); ?></caption>

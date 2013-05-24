@@ -12,11 +12,28 @@
 </head>
 <body>
     <div id="container">
-        <div id="header">
-            <div class="logo"></div>
-            <div class="clear"></div>
+        <div id="menu">
+            <ul>
+                <li>
+                    <?php echo $this->Html->link('Users', array('admin' => true, 'controller' => 'users', 'action' => 'view')); ?>
+                </li>
+                <li>
+                    <?php echo $this->Html->link('Categories', array('admin' => true, 'controller' => 'categories', 'action' => 'view')); ?>
+                </li>
+                <li>
+                    <?php echo $this->Html->link('Products', array('admin' => true, 'controller' => 'products', 'action' => 'view')); ?>
+                </li>
+                <li>
+                    <?php echo $this->Html->link('Pieces', array('admin' => true, 'controller' => 'pieces', 'action' => 'view')); ?>
+                </li>
+                <li>
+                    <?php echo $this->Html->link('Logout', array('admin' => true, 'controller' => 'users', 'action' => 'logout')); ?>
+                </li>
+            </ul>
         </div>
-        <div id="content-wrapper">
+        <div id="content">
+            <?php echo $this->Session->flash(); ?>
+            
             <?php echo $this->fetch('content'); ?>
         </div>
  

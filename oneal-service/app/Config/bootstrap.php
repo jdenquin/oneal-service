@@ -19,13 +19,6 @@ CakeLog::config('error', array(
 	'file' => 'error',
 ));
 
-Configure::write('Config.languages', array(
-	'eng' => __('English'),
-	'fra' => __('French'),
-	'dut' => __('Dutch'),
-	'ger' => __('German'),
-	'por' => __('Portugese'),
-	'spa' => __('Spanish'),
-	'pol' => __('Polish'),
-	'ita' => __('Italian')
-));
+Configure::write('Config.languages', array('eng','fra', 'dut', 'ger', 'ita', 'pol', 'por', 'spa'));
+Configure::write('Config.language', 'eng');
+define('DEFAULT_LANGUAGE', 'eng');

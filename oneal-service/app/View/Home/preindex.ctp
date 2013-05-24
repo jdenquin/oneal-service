@@ -1,3 +1,3 @@
-<?php foreach ($languages as $language => $name) : ?>
-	<p><?php echo $this->Html->link($name, array('language' => $language, 'controller' => 'Home')); ?></p>
+<?php foreach ($languages as $language => $lang) : ?>
+	<p><?php echo $this->Html->link($lang, array('language' => $lang, 'controller' => 'Home', 'action' => 'index')); ?></p>
 <?php  endforeach;?>

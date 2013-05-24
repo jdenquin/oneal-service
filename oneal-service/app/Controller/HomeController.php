@@ -10,16 +10,14 @@ class HomeController extends AppController {
 		//define the language layout
 		$this->layout = 'languages';
 		
-		if($this->session['User.language'] != null) {
-			$this->redirect(array('language' => $this->session['User.language'], 'controller' => 'Home', 'action' => 'index'));
+		if($this->session['Config.language'] != null) {
+			$this->redirect(array('language' => $this->session['Config.language'], 'controller' => 'Home', 'action' => 'index'));
 		} else {
 			$this->set('languages', Configure::read('Config.languages'));
 		}
 	}
 
 	public function index() {
-		$this->loadModel('Category');
-		$this->set('categories_stats', $this->Category->find('all', array('conditions' => array ('brand_id' => '1'))));
-		$this->set('categories_oneal', $this->Category->find('all', array('conditions' => array ('brand_id' => '2'))));
+		$this->redirect(array('language' => $this->params['language'], 'controller' => 'categories', 'action' => 'view'));
 	}
 }

@@ -75,7 +75,28 @@ p {
 	background: #003d4c;
 	text-decoration: underline;
 }
+
+#menu li {
+	display: block;
+	float: left;
+}
+
+#menu a {
+	display: block;
+	float: left;
+	height: 38px;
+	padding: 8px 20px 0 20px;
+	text-decoration: none;
+	text-transform: lowercase;
+	color: #000;
+}
+
+#menu a:hover {
+	text-decoration: underline;
+}
+
 #content{
+	float: left;
 	background: #fff;
 	clear: both;
 	color: #333;
